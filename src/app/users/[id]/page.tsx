@@ -1,9 +1,10 @@
-import React from 'react'
+'use client';
+import { useParams } from 'next/navigation';
+import UserDetail from '../../../components/users/UserDetail';
+import { Typography } from '@mui/material';
 
-function page() {
-  return (
-    <div>page</div>
-  )
+export default function UserDetailPage() {
+  const { id } = useParams();
+  if (!id) return <Typography>کاربر یافت نشد</Typography>;
+  return <UserDetail id={id.toString()} />;
 }
-
-export default page

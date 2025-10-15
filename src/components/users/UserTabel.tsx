@@ -6,7 +6,8 @@ import {
 } from '@mui/material';
 
 import type { User } from '@/lib/types';
-import { useUsers } from '@/hooks/useUsers';
+import { useUsers } from '../../hooks/UseUsers';
+
 
 export default function UserTable() {
   const { data, isLoading, isError, error } = useUsers();
