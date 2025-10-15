@@ -2,6 +2,7 @@
 import React, { ReactNode } from 'react';
 import { ThemeProvider, CssBaseline, Container } from '@mui/material';
 import theme from '@/theme/theme';
+import QueryProvider from '@/providers/react-query-provider';
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
@@ -10,8 +11,9 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <ThemeProvider theme={theme}>
         
         
-      
+        <QueryProvider>
             <Container sx={{ mt: 4 }}>{children}</Container>
+            </QueryProvider>
        
         </ThemeProvider>
       </body>
