@@ -1,43 +1,36 @@
-# 🧩 frontend-nextjs-challenge
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-## 🧱 توضیح پروژه
+## Getting Started
 
-یک **Dashboard ساده برای مدیریت کاربران** بسازید که شامل ۳ صفحه‌ی اصلی باشد:
-
-### 1. صفحه‌ی اصلی (`/`)
-- نمایش یک پیام خوش‌آمدگویی.
-- لینک یا دکمه‌ای برای رفتن به صفحه‌ی کاربران.
----
-### 2. صفحه‌ی لیست کاربران (`/users`)
-- داده‌ها را از API زیر دریافت کنید:
-https://jsonplaceholder.typicode.com/users
-- لیست کاربران را در یک جدول یا کارت نمایش دهید.  
-شامل ستون‌هایی مانند:
-- `Name`
-- `Email`
-- `Company`
-- با کلیک روی هر کاربر، به صفحه‌ی جزئیات آن کاربر هدایت شود.
-
----
-
-### 3. صفحه‌ی جزئیات کاربر (`/users/[id]`)
-- اطلاعات کاربر انتخاب‌شده را با استفاده از `id` از همان API بگیرید.
-- جزئیاتی مانند:
-- `name`, `username`, `email`, `phone`, `address.city`
-را نمایش دهید
-- یک دکمه‌ی بازگشت برای برگشت به صفحه‌ی لیست کاربران نمایش دهید.
----
-## 🧭 نحوه انجام تسک
-
-این ریپو را clone کنید.
-
-یک branch با نام خودتان بسازید. مثال:
+First, run the development server:
 
 ```bash
-git checkout -b feature/ali
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
 ```
-پروژه را توسعه دهید.
 
-تغییرات خود را commit و push کنید.
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-در نهایت یک Pull Request بفرستید.
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+
+This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+
+## Learn More
+
+To learn more about Next.js, take a look at the following resources:
+
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+
+## Deploy on Vercel
+
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
