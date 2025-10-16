@@ -1,7 +1,7 @@
 'use client';
 import { useQuery } from '@tanstack/react-query';
 import { fetcher } from '@/lib/api';
-import type { User } from '@/lib/types';
+import type { User } from '@/types/types';
 
 export function useUserDetail(id?: string | number) {
   return useQuery<User, Error>({

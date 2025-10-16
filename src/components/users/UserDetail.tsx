@@ -1,3 +1,4 @@
+
 'use client';
 
 import { useUserDetail } from '../../hooks/UseUserDetail';
@@ -23,7 +24,7 @@ interface UserDetailCardProps {
 
 export default function UserDetailCard({ id }: UserDetailCardProps) {
   const router = useRouter();
-  const theme = useTheme(); 
+  const theme = useTheme();
   const { data: user, isLoading, isError, error } = useUserDetail(id);
 
   if (isLoading) {
@@ -35,38 +36,60 @@ export default function UserDetailCard({ id }: UserDetailCardProps) {
   }
 
   if (isError) {
-    return <Alert severity="error">خطا در دریافت جزئیات: {error?.message}</Alert>;
+    return <Alert severity="error">Error loading user details: {error?.message}</Alert>;
   }
 
   if (!user) {
-    return <Typography>کاربری یافت نشد</Typography>;
+    return <Typography>User not found</Typography>;
   }
 
   return (
-    <Paper sx={{ p: 3, maxWidth: 700, mx: 'auto', backgroundColor: theme.palette.background.paper }}>
-      <Typography variant="h5" gutterBottom color={theme.palette.primary.main}>
-        جزئیات کاربر
+    <Paper
+      sx={{
+        p: 3,
+        maxWidth: 700,
+        mx: 'auto',
+        backgroundColor: theme.palette.background.paper,
+      }}
+    >
+      <Typography
+        variant="h5"
+        gutterBottom
+        color={theme.palette.primary.main}
+        align="center"
+      >
+        User Details
       </Typography>
 
       <TableContainer>
         <Table>
           <TableBody>
             {[
-              ['نام', user.name],
-              ['نام کاربری', user.username],
-              ['ایمیل', user.email],
-              ['تلفن', user.phone],
-              ['شهر', user.address?.city || 'نامشخص'],
-              ['شرکت', user.company?.name || 'نامشخص'],
+              ['Name', user.name],
+              ['Username', user.username],
+              ['Email', user.email],
+              ['Phone', user.phone],
+              ['City', user.address?.city || 'Unknown'],
+              ['Company', user.company?.name || 'Unknown'],
             ].map(([label, value], index) => (
               <TableRow
                 key={index}
                 sx={{
-                  backgroundColor: index % 2 === 0 ? theme.palette.action.hover : 'transparent',
+                  backgroundColor:
+                    index % 2 === 0
+                      ? theme.palette.action.hover
+                      : 'transparent',
                   '&:hover': { backgroundColor: theme.palette.action.selected },
                 }}
               >
-                <TableCell sx={{ fontWeight: 'bold', color: theme.palette.primary.main }}>{label}</TableCell>
+                <TableCell
+                  sx={{
+                    fontWeight: 'bold',
+                    color: theme.palette.primary.main,
+                  }}
+                >
+                  {label}
+                </TableCell>
                 <TableCell>{value}</TableCell>
               </TableRow>
             ))}
@@ -80,7 +103,7 @@ export default function UserDetailCard({ id }: UserDetailCardProps) {
           color="primary"
           onClick={() => router.push('/users')}
         >
-          بازگشت
+          Back
         </Button>
       </Box>
     </Paper>

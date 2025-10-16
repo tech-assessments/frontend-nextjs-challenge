@@ -1,4 +1,3 @@
-
 'use client';
 import Link from 'next/link';
 import {
@@ -16,7 +15,7 @@ import {
 } from '@mui/material';
 import { useTheme } from '@mui/material/styles';
 
-import type { User } from '@/lib/types';
+import type { User } from '@/types/types';
 import { useUsers } from '@/hooks/UseUsers';
 
 export default function UserTable() {
@@ -31,16 +30,44 @@ export default function UserTable() {
     );
 
   if (isError)
-    return <Alert severity="error">خطا در بارگذاری کاربران: {error?.message}</Alert>;
+    return <Alert severity="error">Error loading users: {error?.message}</Alert>;
 
   return (
-    <TableContainer component={Paper} sx={{ maxWidth: 900, mx: 'auto', mt: 3 }}>
+    <TableContainer
+      component={Paper}
+      sx={{
+        maxWidth: 900,
+        mx: 'auto',
+        mt: 3,
+        boxShadow: 3,
+        borderRadius: 2,
+      }}
+    >
+      <Typography
+        variant="h5"
+        align="center"
+        sx={{
+          mt: 2,
+          mb: 1,
+          fontWeight: 'bold',
+          color: theme.palette.primary.main,
+        }}
+      >
+        User List
+      </Typography>
+
       <Table>
         <TableHead>
           <TableRow sx={{ backgroundColor: theme.palette.primary.main }}>
-            <TableCell sx={{ color: theme.palette.common.white, fontWeight: 'bold' }}>نام</TableCell>
-            <TableCell sx={{ color: theme.palette.common.white, fontWeight: 'bold' }}>ایمیل</TableCell>
-            <TableCell sx={{ color: theme.palette.common.white, fontWeight: 'bold' }}>شرکت</TableCell>
+            <TableCell sx={{ color: theme.palette.common.white, fontWeight: 'bold' }}>
+              Name
+            </TableCell>
+            <TableCell sx={{ color: theme.palette.common.white, fontWeight: 'bold' }}>
+              Email
+            </TableCell>
+            <TableCell sx={{ color: theme.palette.common.white, fontWeight: 'bold' }}>
+              Company
+            </TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
@@ -49,10 +76,19 @@ export default function UserTable() {
               key={user.id}
               component={Link}
               href={`/users/${user.id}`}
-              style={{ cursor: 'pointer', textDecoration: 'none', color: 'inherit' }}
+              style={{
+                cursor: 'pointer',
+                textDecoration: 'none',
+                color: 'inherit',
+              }}
               sx={{
-                backgroundColor: index % 2 === 0 ? theme.palette.action.hover : 'transparent',
-                '&:hover': { backgroundColor: theme.palette.action.selected },
+                backgroundColor:
+                  index % 2 === 0
+                    ? theme.palette.action.hover
+                    : theme.palette.background.default,
+                '&:hover': {
+                  backgroundColor: theme.palette.action.selected,
+                },
               }}
             >
               <TableCell>{user.name}</TableCell>

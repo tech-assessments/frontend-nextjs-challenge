@@ -7,10 +7,14 @@ export default function Navbar() {
     <AppBar position="static">
       <Toolbar>
         <Typography variant="h6" sx={{ flexGrow: 1 }}>
-          داشبورد
+          Dashboard
         </Typography>
-        <Button color="inherit" component={Link} href="/">خانه</Button>
-        <Button color="inherit" component={Link} href="/users">کاربران</Button>
+        <Button color="inherit" component={Link} href="/">
+          Home
+        </Button>
+        <Button color="inherit" component={Link} href="/users">
+          Users
+        </Button>
       </Toolbar>
     </AppBar>
   );

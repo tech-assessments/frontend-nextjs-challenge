@@ -5,6 +5,8 @@ import { Typography } from '@mui/material';
 
 export default function UserDetailPage() {
   const { id } = useParams();
-  if (!id) return <Typography>کاربر یافت نشد</Typography>;
+
+  if (!id) return <Typography>User not found</Typography>;
+
   return <UserDetail id={id.toString()} />;
 }
