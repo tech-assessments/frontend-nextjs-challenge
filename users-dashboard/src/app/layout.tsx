@@ -20,7 +20,7 @@ const poppins = Poppins({
 })
 
 export const metadata: Metadata = {
-  title: "Welcome to Dashboard",
+  title: "App",
   description: "This is a simple dashboard for seeing users section",
 };
 

@@ -3,21 +3,16 @@ import BackTo from "@/components/BackTo";
 import { FiMail, FiGlobe, FiMapPin, FiBriefcase } from "react-icons/fi";
 import { Metadata } from "next";
 
-interface UserPageProps {
-  params: { id: string };
-}
-
 export const metadata: Metadata = {
-    title: "User Page",
-  };
-  
-export default async function UserPage({ params }: UserPageProps) {
-  const user = await getUserById(Number(params.id));
+  title: "User Page",
+};
+
+export default async function UserPage({ params }: { params: Promise<{ id: string }> }) {
+  const { id } = await params;
+  const user = await getUserById(Number(id));
 
   if (!user) {
-    return (
-      <div className="text-center py-10 text-neutral">User not found.</div>
-    );
+    return <div className="text-center py-10 text-neutral">User not found.</div>;
   }
 
   return (
@@ -33,7 +28,7 @@ export default async function UserPage({ params }: UserPageProps) {
           </p>
 
           <p className="flex items-center gap-2">
-            <FiBriefcase className="text-secondary" />{" "}
+            <FiBriefcase className="text-secondary" />
             <span className="font-medium">{user.company.name}</span>
           </p>
 
