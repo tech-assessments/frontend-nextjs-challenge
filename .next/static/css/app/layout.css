@@ -1,0 +1,78 @@
+/*!*************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[14].oneOf[10].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[14].oneOf[10].use[3]!./app/globals.css ***!
+  \*************************************************************************************************************************************************************************************************************************************************************/
+/* src/app/globals.css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* RTL support */
+html[dir="rtl"] {
+  direction: rtl;
+}
+
+/*!************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[14].oneOf[10].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[14].oneOf[10].use[3]!./node_modules/@fontsource/vazir/300.css ***!
+  \************************************************************************************************************************************************************************************************************************************************************************************/
+/* vazir-all-300-normal*/
+@font-face {
+  font-family: 'Vazir';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 300;
+  src: url(/_next/static/media/vazir-all-300-normal.8df7cd29.woff2) format('woff2'), url(/_next/static/media/vazir-all-300-normal.2124134c.woff) format('woff');
+  
+}
+
+/*!************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[14].oneOf[10].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[14].oneOf[10].use[3]!./node_modules/@fontsource/vazir/400.css ***!
+  \************************************************************************************************************************************************************************************************************************************************************************************/
+/* vazir-all-400-normal*/
+@font-face {
+  font-family: 'Vazir';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 400;
+  src: url(/_next/static/media/vazir-all-400-normal.84f0e089.woff2) format('woff2'), url(/_next/static/media/vazir-all-400-normal.cf9f136b.woff) format('woff');
+  
+}
+
+/*!************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[14].oneOf[10].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[14].oneOf[10].use[3]!./node_modules/@fontsource/vazir/500.css ***!
+  \************************************************************************************************************************************************************************************************************************************************************************************/
+/* vazir-all-500-normal*/
+@font-face {
+  font-family: 'Vazir';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 500;
+  src: url(/_next/static/media/vazir-all-500-normal.ff156183.woff2) format('woff2'), url(/_next/static/media/vazir-all-500-normal.8ba4d58c.woff) format('woff');
+  
+}
+
+/*!************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[14].oneOf[10].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[14].oneOf[10].use[3]!./node_modules/@fontsource/vazir/700.css ***!
+  \************************************************************************************************************************************************************************************************************************************************************************************/
+/* vazir-all-700-normal*/
+@font-face {
+  font-family: 'Vazir';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 700;
+  src: url(/_next/static/media/vazir-all-700-normal.503224cb.woff2) format('woff2'), url(/_next/static/media/vazir-all-700-normal.1069c522.woff) format('woff');
+  
+}
+
