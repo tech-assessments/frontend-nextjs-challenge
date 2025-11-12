@@ -4,8 +4,6 @@ import { Suspense } from "react";
 
 export default async function UserDetail({ params }) {
   const { userId } = await params;
-
-  console.log({userId})
   try {
     const res = await fetch(
       `https://jsonplaceholder.typicode.com/users/${userId}`,
