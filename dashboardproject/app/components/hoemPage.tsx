@@ -14,8 +14,8 @@ import {
   Dashboard as DashboardIcon,
 } from "@mui/icons-material";
 import { useRouter } from "next/navigation";
-import { HomePageProps } from "../constants/type";
 import DashboardCard from "./dashboard/dashboardCardPage";
+import { HomePageProps } from "../constants/type";
 
 export default function HomePage({ posts, users }: HomePageProps) {
   const router = useRouter();

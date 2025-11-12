@@ -1,15 +1,14 @@
-
 import type { Metadata } from "next";
 import "./globals.css";
-//import Header from "./layout/header";
-//import Footer from "./layout/footer";
+import Header from "./layout/header";
+import Footer from "./layout/footer";
 import { Box } from "@mui/material";
-import { AppRouterCacheProvider } from '@mui/material-nextjs/v14-appRouter';
-import { ThemeProvider } from '@mui/material/styles';
-import CssBaseline from '@mui/material/CssBaseline';
-import theme from './theme';
+import { AppRouterCacheProvider } from "@mui/material-nextjs/v14-appRouter";
+import { ThemeProvider } from "@mui/material/styles";
+import CssBaseline from "@mui/material/CssBaseline";
+import theme from "./theme";
 
-export const metadata: Metadata = {   
+export const metadata: Metadata = {
   title: "داشبورد مدیریت کاربران",
   description: "User management dashboard",
 };
@@ -32,7 +31,7 @@ export default function RootLayout({
                 minHeight: "100vh",
               }}
             >
-           
+              <Header />
               <Box
                 component="main"
                 sx={{
@@ -44,7 +43,7 @@ export default function RootLayout({
               >
                 {children}
               </Box>
-             
+              <Footer />
             </Box>
           </ThemeProvider>
         </AppRouterCacheProvider>
