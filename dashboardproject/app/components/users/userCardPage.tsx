@@ -172,6 +172,7 @@ export default function UserCard({ user }: User) {
                   flexGrow: 1,
                 }}
               >
+                
                 {user.email}
               </Typography>
             </Box>
